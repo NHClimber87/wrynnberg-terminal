@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wrynnberg Terminal</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header id="top">
+  <div class="brand">WRYNNBERG<span>TERMINAL</span><small id="realm"></small></div>
+  <div id="accounts" class="accounts" aria-label="Data age for each account"></div>
+  <div class="topright">
+    <span id="g1" class="g1"></span>
+    <button id="chartbtn" title="Price chart layout (key c)">c&nbsp;Chart</button>
+    <button id="refresh" title="Copy changed files from G1 (key r)">r&nbsp;Refresh</button>
+    <button id="helpbtn" title="Keyboard keys (key ?)">?</button>
+  </div>
+</header>
+<section id="kpis" aria-label="Totals"></section>
+<main id="grid"></main>
+<div id="help" class="overlay" hidden>
+  <div class="helpbox" role="dialog" aria-label="Keyboard keys">
+    <h2>Keyboard</h2>
+    <table>
+      <tr><td><kbd>1</kbd>–<kbd>6</kbd></td><td>Select a panel. Press again to make it full screen.</td></tr>
+      <tr><td><kbd>Esc</kbd></td><td>Close full screen, clear the filter, close this help.</td></tr>
+      <tr><td><kbd>/</kbd></td><td>Filter the selected panel by name.</td></tr>
+      <tr><td><kbd>j</kbd> <kbd>k</kbd></td><td>Move the row cursor down and up.</td></tr>
+      <tr><td><kbd>p</kbd></td><td>Pin or unpin the item on the cursor row (watchlist).</td></tr>
+      <tr><td><kbd>[</kbd> <kbd>]</kbd></td><td>Change the view tab of the selected panel.</td></tr>
+      <tr><td><kbd>s</kbd></td><td>Sort by the next column. <kbd>S</kbd> reverses the sort.</td></tr>
+      <tr><td><kbd>c</kbd></td><td>Price chart layout: the list on the left, the chart on the right, a second panel under the list.</td></tr>
+      <tr><td><kbd>Enter</kbd></td><td>Chart the cursor row. In chart layout the chart follows the cursor.</td></tr>
+      <tr><td><kbd>1</kbd>–<kbd>6</kbd> · <kbd>Shift</kbd>+<kbd>1</kbd>–<kbd>6</kbd></td><td>Chart layout: pick the list. Shift picks the panel under it.</td></tr>
+      <tr><td><kbd>Tab</kbd> · <kbd>b</kbd></td><td>Chart layout: swap the list and the panel under it. b shows the next panel under it.</td></tr>
+      <tr><td><kbd>a</kbd> · <kbd>x</kbd></td><td>Hold the chart item as a compare line. Then move the cursor: the new item draws against it (% scale). x clears compare.</td></tr>
+      <tr><td><kbd>f</kbd> · <kbd>l</kbd></td><td>Fit the chart to all data. Log price scale on or off.</td></tr>
+      <tr><td><kbd>o</kbd></td><td>Old fresh starts on or off: their average price at the same hours after launch, scaled to the live level.</td></tr>
+      <tr><td><kbd>r</kbd></td><td>Copy changed files from G1 (read only), then reload.</td></tr>
+      <tr><td><kbd>?</kbd></td><td>Show this help.</td></tr>
+    </table>
+    <p>Money is gold (g), silver (s) and copper (c). "net" is after the 5% AH cut. Deposits are not included.
+       <span class="beta">BETA</span> marks a beta realm value. Beta values never enter a live total, average or margin.
+       Times are local G2 time.</p>
+  </div>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="vendor/lightweight-charts.standalone.production.js"></script>
+<script src="app.js"></script>
+<script src="chart.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Personal settings live outside the repo (~/.config/wrynnberg-terminal/config.json). Never commit them.
+config.json
+local*.json
+# Game data copies, caches and category files
+data/
+__pycache__/
+*.pyc

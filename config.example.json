@@ -1,0 +1,10 @@
+{
+ "data_dir": "~/wrynnberg-data",
+ "live_realm": "CAMWOW US2 Realm 11 RP",
+ "beta_realm": "Classic Beta PvE 2",
+ "faction": "Alliance",
+ "accounts": {"acct-1": "ACCOUNT1", "acct-2": "ACCOUNT2#1"},
+ "mains": ["Mychar", "Myalt"],
+ "game_pc_host": "gamepc",
+ "saved_variables_dir": "C:/Program Files (x86)/World of Warcraft/_forever_/WTF/Account/{acct}/SavedVariables"
+}
